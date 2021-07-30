@@ -1,5 +1,4 @@
 # Project Overview
-
 ## Project Links
 
 - [Github](https://github.com/cjmccaskill/My-Journeys)
@@ -7,36 +6,49 @@
 
 ## Project Description
 
-Use this section to describe your final project and perhaps any links to relevant sites that help convey the concept and\or functionality.
+For this project, I am building out my blog site to have a place to post articles that I write about my journey into software development, food recipes, and my travels around the globe. I will build the site as a React app and build out my own API database to store my blog post and media. 
 
 ## API
 
-Use this section to include info about the API you have chosen and a code snippet of the data that it returns and is required for your project.
+Here is a sample code snippet from the api that I built for this project.
 
 ```
-{data: {} }
+{data: {   "fields": {
+        "title": "Automate with webhooks",
+        "heroImage": {}
+        },
+        "slug": "automate-with-webhooks",
+        "description": "Webhooks notify you, another person or system when resources have changed by calling a given HTTP endpoint.",
+        "body": "## What are webhooks?\n\nThe webhooks are used to notify you when content has been changed. Specify a URL, configure your webhook, and we will send an HTTP POST request whenever something happens to your content.\n\n## How do I configure a webhook?\n\nGo to Settings → Webhooks from the navigation bar at the top. From there, hit Add webhook, and you will be directed to your new webhook. Then choose a name, put in the information of your HTTP endpoint (URL and authentication), specify any custom headers and select the types of events that should trigger the webhook.\n\n## Why do I get an old version in the CDA?\n\nAs the delivery API is powered by a CDN network consisting of hundreds of servers distributed across continents, it takes some time (up to a few minutes) to reflect the changes to the published content. This must be taken into consideration when reacting to webhooks. In normal conditions, there could be a reasonable delay of 2 to 5 minutes.\n\nExtracted from the [Webhooks FAQ](https://www.contentful.com/faq/webhooks/ \"Webhooks FAQ\").",
+        "author": {}
+        },
+        "publishDate": "2017-05-12T00:00+02:00",
+        "tags": [
+          "javascript"
+        ]} }
 ```
 
 ## Wireframes
 
-Upload images of wireframe to cloudinary and add the link here with a description of the specific wireframe. Also, define the the React components and the architectural design of your app.
+- [Project wireframes](https://res.cloudinary.com/mccaskillmediagroup/image/upload/v1627664181/Blog%20wireframe.heic)
+- [Project architecture](https://wireframepro.mockflow.com/view/M2c2fac4e009957396a73fb0641486d8b1627664733544#/page/efdc352914ca4c2fa917770d69a519db)
 
-- [Project wireframes]()
-- [Project architecture]()
-
-### MVP/PostMVP - 5min
-
-The functionality will then be divided into two separate lists: MPV and PostMVP. Carefully decided what is placed into your MVP as the client will expect this functionality to be implemented upon project completion.
-
+### MVP/PostMVP - 
 #### MVP EXAMPLE
 
-- Find and use external api
-- Render data on page
-- Allow user to interact with the page
+- Landing page for the Blog
+    - Header with a nav link
+    - Hero
+    - List of posted blogs
+    - Footer with follow me links
+- Render data from the API to popluate the page with blog post
+- Allow user to click on a post to open on a new page
 
 #### PostMVP EXAMPLE
 
-- Add localStorage or firebase for storage
+- Add Search input for the blog post to search by topic or tags
+- Add in a random hero image generator to change the hero image
+- Add about author section/pop out component 
 
 ## Components
 
@@ -47,20 +59,32 @@ Based on the initial logic defined in the previous sections try and breakdown th
 | Component |                          Description                          |
 | --------- | :-----------------------------------------------------------: |
 | App       | This will make the initial data pull and include React Router |
-| Header    |          This will render the header include the nav          |
-| Footer    |          This will render the header include the nav          |
+| Header    | This will render the header include the nav                   |
+| Footer    | This will render the header include the nav                   |
+| Hero      | Landing page image on the landin page                         |
+| Blog list | Will render the complete lis of blog post from the API call   |
+| Idv. Blog | When a user selects a post it will render on a new page       |
 
-Time frames are also key in the development cycle. You have limited time to code all phases of the game. Your estimates can then be used to evalute game possibilities based on time needed and the actual time you have before game must be submitted. It's always best to pad the time by a few hours so that you account for the unknown so add and additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
+Time frames are also vital in the development cycle. You have limited time to code all phases of the app. Your estimates can then be used to evaluate app possibilities based on the time needed and the actual time before the app must be submitted. It's always best to pad the time by a few hours to account for the unknown, adding an additional hour or two to each component to play it safe. Also, put a gif at the top of your Readme before you pitch, and you'll get a panda prize.
 
 | Component        | Priority | Estimated Time | Time Invetsted | Actual Time |
 | ---------------- | :------: | :------------: | :------------: | :---------: |
-| Adding Form      |    H     |      3hrs      |     3.5hrs     |   3.5hrs    |
-| Working with API |    H     |      3hrs      |     2.5hrs     |   2.5hrs    |
-| Total            |    H     |      6hrs      |      5hrs      |    5hrs     |
+| Design Structure |    H     |      4hrs      |     hrs        |   hrs       |
+| APP              |    H     |      3hrs      |     hrs        |   hrs       |
+| Header           |    H     |      2hrs      |     hrs        |   hrs       |
+| Footer           |    H     |      2hrs      |     hrs        |   hrs       |
+| Hero             |    H     |      2hrs      |     hrs        |   hrs       |
+| Blog List        |    H     |      3hrs      |     hrs        |   hrs       |
+| Idv Blog page    |    H     |      3hrs      |     hrs        |   hrs       |
+| Working with API |    H     |      3hrs      |     hrs        |   hrs       |
+| Styling content  |    H     |      3hrs      |     hrs        |   hrs       |
+| Debugging        |    H     |      3hrs      |     hrs        |   hrs       |
+| Total            |    H     |      28rs      |     hrs        |   hrs       |
 
 ## Additional Libraries
 
-Use this section to list all supporting libraries and thier role in the project such as Axios, ReactStrap, D3, etc.
+ -React
+ -Sass
 
 ## Code Snippet
 
