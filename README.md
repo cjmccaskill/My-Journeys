@@ -3,7 +3,7 @@
 ## Project Links
 
 - [Github](https://github.com/cjmccaskill/My-Journeys)
-- [Deployed site]()
+- [Deployed site](https://my-journeys-9fx6wjqm5-cjmccaskill.vercel.app/)
 
 ## Project Description
 
