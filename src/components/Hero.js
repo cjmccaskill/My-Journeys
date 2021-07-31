@@ -1,7 +1,21 @@
 import React from "react";
 
 const Hero = () => {
-  return <div>This is the Hero section where an image goes.</div>;
+  return (
+    <div className="hero-container">
+      <img
+        className="hero-img"
+        src="https://res.cloudinary.com/mccaskillmediagroup/image/upload/v1627699130/computerDeskSetup_ckkphp.jpg"
+        alt="computer desk setup"
+      />
+      <div className="hero-text">
+        <p>
+          I'm sharing my journey in web development, working remotely, current
+          projects, and the lastest invovations in the world of tech.
+        </p>
+      </div>
+    </div>
+  );
 };
 
 export default Hero;
