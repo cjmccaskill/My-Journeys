@@ -11,7 +11,7 @@ function App() {
 
   const getAllBlogs = async () => {
     const response = await fetch(
-      "https://cdn.contentful.com/spaces/etc9m00jwpir/environments/master/entries?access_token=6g-qYJkhoa2WNr5MqK3ads4PLkPDy3DQltMuz6QuthU&content_types/blogPost"
+      "https://cdn.contentful.com/spaces/etc9m00jwpir/environments/master/entries?access_token=6g-qYJkhoa2WNr5MqK3ads4PLkPDy3DQltMuz6QuthU&content_types/blogPost&include=6"
     );
     const data = await response.json();
     console.log("api data call -", data);
@@ -19,13 +19,12 @@ function App() {
     const postDataArr = data.items.map((item, index) => {
       return {
         title: item.fields.title,
-        image: item.fields.image,
-        slug: item.fields.slug,
+        image:
+          "https://images.ctfassets.net/etc9m00jwpir/7orLdboQQowIUs22KAW4U/9736a36f864b6f1171584b44bf63d285/matt-palmer-254999.jpg",
         description: item.fields.description,
         content: item.fields.body,
         author: item.fields.author,
         postDate: item.fields.publishDate,
-        tags: item.fields.tags,
       };
     });
     console.log("postDataArr = ", postDataArr);

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const BlogPostList = (props) => {
   return (
@@ -6,16 +7,19 @@ const BlogPostList = (props) => {
       {props.blogs.map((blog, index) => {
         return (
           <div className="blog-list-container">
-            <article className="blog-post">
+            <article className="blog-post" key={index}>
               <img src={blog.image} alt="" />
               <h3>{blog.title}</h3>
+              <p>{blog.postDate}</p>
               <p>{blog.description}</p>
-              <button
-                className="select-blog-post"
-                onClick={() => props.selectedPost(blog)}
-              >
-                Read More
-              </button>
+              <Link to="/blogPost">
+                <button
+                  className="read-more-btn"
+                  onClick={() => props.selectedPost(blog)}
+                >
+                  Read More
+                </button>
+              </Link>
             </article>
           </div>
         );

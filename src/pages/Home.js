@@ -12,13 +12,11 @@ const Home = (props) => {
     const data = await response.json();
     setSelected({
       title: data.fields.title,
-      image: data.fields.image,
-      slug: data.fields.slug,
+      image: data.fields.image.id,
       description: data.fields.description,
       content: data.fields.body,
       author: data.fields.author,
       postDate: data.fields.publishDate,
-      tags: data.fields.tags,
     });
   };
 

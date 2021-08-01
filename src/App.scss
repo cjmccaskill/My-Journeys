@@ -4,6 +4,7 @@
   box-sizing: border-box;
 }
 
+// GLOBAL styles
 .container {
   width: 100%;
   position: relative;
@@ -11,6 +12,7 @@
   flex-direction: column;
 }
 
+// HERO styles
 .hero-container {
   position: relative;
   img {
@@ -35,6 +37,34 @@
   }
 }
 
+// BLOG CARD styles
+.blog-list-container {
+  display: flex;
+
+  .blog-post {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border: 1px solid gray;
+    width: 300px;
+
+    img {
+      width: 300px;
+      // object-fit: scale-down;
+    }
+
+    .read-more-btn {
+      background-color: transparent;
+      border: none;
+
+      &:hover {
+        scale: 1.2;
+      }
+    }
+  }
+}
+
+// FOOTER styles
 .footer-container {
   display: flex;
   flex-direction: column;
