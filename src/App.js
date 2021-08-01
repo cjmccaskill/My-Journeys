@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 
 function App() {
   const [blogs, setBlogs] = useState([]);
+  const [blog, setBlog] = useState([]);
 
   const getAllBlogs = async () => {
     const response = await fetch(
@@ -19,8 +20,7 @@ function App() {
     const postDataArr = data.items.map((item, index) => {
       return {
         title: item.fields.title,
-        image:
-          "https://images.ctfassets.net/etc9m00jwpir/7orLdboQQowIUs22KAW4U/9736a36f864b6f1171584b44bf63d285/matt-palmer-254999.jpg",
+        image: data.includes.Asset[index].fields.file.url,
         description: item.fields.description,
         content: item.fields.body,
         author: item.fields.author,
@@ -30,6 +30,10 @@ function App() {
     console.log("postDataArr = ", postDataArr);
 
     setBlogs(postDataArr);
+  };
+
+  const openBlogPost = (post) => {
+    setBlog([...blog, post]);
   };
 
   useEffect(() => {
@@ -44,10 +48,10 @@ function App() {
           <Redirect to="/home" />
         </Route>
         <Route path="/home">
-          <Home blogs={blogs} />
+          <Home blogs={blogs} openBlogPost={openBlogPost} />
         </Route>
         <Route path="/blogPost">
-          <BlogPost />
+          <BlogPost blog={blog} />
         </Route>
       </Switch>
       <Footer />
