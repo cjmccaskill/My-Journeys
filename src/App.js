@@ -7,14 +7,30 @@ import BlogPost from "./pages/BlogPost";
 import Footer from "./components/Footer";
 
 function App() {
-  const [blogs, setBlogs] = useState();
+  const [blogs, setBlogs] = useState([]);
 
   const getAllBlogs = async () => {
     const response = await fetch(
       "https://cdn.contentful.com/spaces/etc9m00jwpir/environments/master/entries?access_token=6g-qYJkhoa2WNr5MqK3ads4PLkPDy3DQltMuz6QuthU&content_types/blogPost"
     );
     const data = await response.json();
-    setBlogs(data.results);
+    console.log("api data call -", data);
+
+    const postDataArr = data.items.map((item, index) => {
+      return {
+        title: item.fields.title,
+        image: item.fields.image,
+        slug: item.fields.slug,
+        description: item.fields.description,
+        content: item.fields.body,
+        author: item.fields.author,
+        postDate: item.fields.publishDate,
+        tags: item.fields.tags,
+      };
+    });
+    console.log("postDataArr = ", postDataArr);
+
+    setBlogs(postDataArr);
   };
 
   useEffect(() => {

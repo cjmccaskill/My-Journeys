@@ -4,16 +4,24 @@
   box-sizing: border-box;
 }
 
+.container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
 .hero-container {
   position: relative;
   img {
     width: 100%;
+    max-width: 2000px;
     height: 300px; //set the height to 400px @ 768px, 500px @ 1024px and larger
     object-fit: cover;
   }
 
   p {
-    background-color: rgba(0, 0, 0, 0.572);
+    background-color: rgba(0, 0, 0, 0.672);
     color: #fff;
     text-align: center;
     font-size: 1.3em;
@@ -24,5 +32,32 @@
     border: 2px solid rgba(0, 0, 0, 0.772);
     border-radius: 2px 20px 2px 20px;
     padding: 8px 10px;
+  }
+}
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+  margin: 10px 0;
+
+  .quote-container {
+    max-width: 400px;
+    margin: 8px auto;
+  }
+  .quote {
+    font-size: 1em;
+  }
+
+  .quote-author {
+    font-size: 1.1em;
+    text-align: right;
+    margin-top: 5px;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
   }
 }

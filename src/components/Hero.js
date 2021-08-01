@@ -10,8 +10,9 @@ const Hero = () => {
       />
       <div className="hero-text">
         <p>
-          I'm sharing my journey in web development, working remotely, current
-          projects, and the lastest invovations in the world of tech.
+          I'm sharing <span>my journey</span> in web development, working
+          remotely, current projects, and the lastest invovations in the world
+          of tech.
         </p>
       </div>
     </div>
