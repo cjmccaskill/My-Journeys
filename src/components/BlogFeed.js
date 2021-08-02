@@ -8,11 +8,8 @@ const BlogFeed = (props) => {
         return (
           <div className="blogs" key={index}>
             <article className="blog-post">
-              <Link to="./blogPost">
-                <div
-                  className="blog-img"
-                  onClick={() => props.selectedPost(blog)}
-                >
+              <Link to={`./blogPost/${blog.id}`}>
+                <div className="blog-img">
                   <img src={blog.image} alt="" />
                 </div>
               </Link>
@@ -23,12 +20,7 @@ const BlogFeed = (props) => {
                 </Link>
                 <p>{blog.description}</p>
                 <Link to="/blogPost">
-                  <div
-                    className="read-more"
-                    onClick={() => props.selectedPost(blog.selected)}
-                  >
-                    Read More
-                  </div>
+                  <div className="read-more">Read More</div>
                 </Link>
               </div>
             </article>

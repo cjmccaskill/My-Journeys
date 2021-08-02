@@ -8,17 +8,16 @@ import Footer from "./components/Footer";
 
 function App() {
   const [blogs, setBlogs] = useState([]);
-  const [blog, setBlog] = useState([]);
 
   const getAllBlogs = async () => {
     const response = await fetch(
       "https://cdn.contentful.com/spaces/etc9m00jwpir/environments/master/entries?access_token=6g-qYJkhoa2WNr5MqK3ads4PLkPDy3DQltMuz6QuthU&content_types/blogPost&include=6"
     );
     const data = await response.json();
-    console.log("api data call -", data);
 
     const postDataArr = data.items.map((item, index) => {
       return {
+        id: item.sys.id,
         title: item.fields.title,
         image: data.includes.Asset[index].fields.file.url,
         description: item.fields.description,
@@ -27,14 +26,9 @@ function App() {
         postDate: item.fields.publishDate,
       };
     });
-    console.log("postDataArr = ", postDataArr);
-
     setBlogs(postDataArr);
   };
 
-  const openBlogPost = (post) => {
-    setBlog([...blog, post]);
-  };
 
   useEffect(() => {
     getAllBlogs();
@@ -48,11 +42,14 @@ function App() {
           <Redirect to="/home" />
         </Route>
         <Route path="/home">
-          <Home blogs={blogs} openBlogPost={openBlogPost} />
+          <Home blogs={blogs} />
         </Route>
-        <Route path="/blogPost">
-          <BlogPost blog={blog} />
-        </Route>
+        <Route
+          path="/blogPost/:blogId"
+          render={(routerProps) => {
+            return <BlogPost {...routerProps} />;
+          }}
+        ></Route>
       </Switch>
       <Footer />
     </div>
@@ -60,3 +57,4 @@ function App() {
 }
 
 export default App;
+
