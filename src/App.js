@@ -8,10 +8,10 @@ import Footer from "./components/Footer";
 
 function App() {
   const [blogs, setBlogs] = useState([]);
-
+  
   const getAllBlogs = async () => {
     const response = await fetch(
-      "https://cdn.contentful.com/spaces/etc9m00jwpir/environments/master/entries?access_token=6g-qYJkhoa2WNr5MqK3ads4PLkPDy3DQltMuz6QuthU&content_types/blogPost&include=6"
+      "https://cdn.contentful.com/spaces/etc9m00jwpir/environments/master/entries?access_token=6g-qYJkhoa2WNr5MqK3ads4PLkPDy3DQltMuz6QuthU&content_types/blogPost"
     );
     const data = await response.json();
 
@@ -26,9 +26,9 @@ function App() {
         postDate: item.fields.publishDate,
       };
     });
+
     setBlogs(postDataArr);
   };
-
 
   useEffect(() => {
     getAllBlogs();
@@ -57,4 +57,3 @@ function App() {
 }
 
 export default App;
-
