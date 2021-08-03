@@ -12,6 +12,26 @@
   flex-direction: column;
 }
 
+// HEADER nav stlyes
+.nav-container {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 40px;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    color: white;
+    text-decoration: none;
+  }
+}
+
 // HERO styles
 .hero-container {
   position: relative;
@@ -89,6 +109,11 @@
       }
     }
   }
+}
+
+// BLOG Post page styles
+.post-container {
+  margin-top: 1em;
 }
 
 // FOOTER styles

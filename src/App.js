@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 
 function App() {
   const [blogs, setBlogs] = useState([]);
-  
+
   const getAllBlogs = async () => {
     const response = await fetch(
       "https://cdn.contentful.com/spaces/etc9m00jwpir/environments/master/entries?access_token=6g-qYJkhoa2WNr5MqK3ads4PLkPDy3DQltMuz6QuthU&content_types/blogPost"
@@ -19,7 +19,10 @@ function App() {
       return {
         id: item.sys.id,
         title: item.fields.title,
-        image: data.includes.Asset[index].fields.file.url,
+        image: data.includes.Asset.filter((img) => {
+          let id = img.sys.id;
+          return id === item.fields.image.sys.id;
+        })[0].fields.file.url,
         description: item.fields.description,
         content: item.fields.body,
         author: item.fields.author,
@@ -45,7 +48,7 @@ function App() {
           <Home blogs={blogs} />
         </Route>
         <Route
-          path="/blogPost/:blogId"
+          path="/blogPost/:id"
           render={(routerProps) => {
             return <BlogPost {...routerProps} />;
           }}
