@@ -77,11 +77,11 @@ Time frames are also vital in the development cycle. You have limited time to co
 | Footer           |    H     |      2hrs      |     1hr     |
 | Hero             |    H     |      2hrs      |     1hr     |
 | Blog List        |    H     |      3hrs      |    3hrs     |
-| Idv Blog page    |    H     |      3hrs      |     hrs     |
+| Idv Blog page    |    H     |      3hrs      |    3hrs     |
 | Working with API |    H     |      3hrs      |    4hrs     |
 | Styling content  |    H     |      3hrs      |    3hrs     |
 | Debugging        |    H     |      3hrs      |    2hrs     |
-| Total            |    H     |      28rs      |   20.5hrs   |
+| Total            |    H     |      28rs      |   23.5hrs   |
 
 ## Additional Libraries
 

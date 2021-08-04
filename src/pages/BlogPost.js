@@ -25,9 +25,14 @@ const BlogPost = (props) => {
   };
 
   useEffect(() => {
-    getSelectedBlog();
-    getSelectedBlogImage();
-  }, []);
+    if (!blog.metadata) {
+      getSelectedBlog();
+    }
+
+    if (blog.metadata) {
+      getSelectedBlogImage();
+    }
+  }, [blog.metadata]);
 
   const loaded = () => {
     return (
