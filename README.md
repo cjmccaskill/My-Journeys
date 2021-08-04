@@ -73,15 +73,15 @@ Time frames are also vital in the development cycle. You have limited time to co
 | ---------------- | :------: | :------------: | :---------: |
 | Design Structure |    H     |      4hrs      |    4hrs     |
 | APP              |    H     |      3hrs      |    3hrs     |
-| Header           |    H     |      2hrs      |     hrs     |
+| Header           |    H     |      2hrs      |   1.5hrs    |
 | Footer           |    H     |      2hrs      |     1hr     |
 | Hero             |    H     |      2hrs      |     1hr     |
 | Blog List        |    H     |      3hrs      |    3hrs     |
 | Idv Blog page    |    H     |      3hrs      |     hrs     |
-| Working with API |    H     |      3hrs      |    3hrs     |
-| Styling content  |    H     |      3hrs      |     hrs     |
-| Debugging        |    H     |      3hrs      |     hrs     |
-| Total            |    H     |      28rs      |     hrs     |
+| Working with API |    H     |      3hrs      |    4hrs     |
+| Styling content  |    H     |      3hrs      |    3hrs     |
+| Debugging        |    H     |      3hrs      |    2hrs     |
+| Total            |    H     |      28rs      |   20.5hrs   |
 
 ## Additional Libraries
 
