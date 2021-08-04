@@ -4,6 +4,7 @@ import { Route, Switch, Redirect } from "react-router-dom";
 // import Header from "./components/Header";
 import Home from "./pages/Home";
 import BlogPost from "./pages/BlogPost";
+import Form from "./components/Form";
 import Footer from "./components/Footer";
 
 function App() {
@@ -53,6 +54,9 @@ function App() {
             return <BlogPost {...routerProps} />;
           }}
         ></Route>
+        <Route path="/form">
+          <Form />
+        </Route>
       </Switch>
       <Footer />
     </div>

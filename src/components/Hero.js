@@ -4,7 +4,7 @@ const Hero = () => {
   return (
     <div className="hero-container">
       <img
-        className="hero-img"
+        className="hero-img "
         src="https://res.cloudinary.com/mccaskillmediagroup/image/upload/v1627699130/computerDeskSetup_ckkphp.jpg"
         alt="computer desk setup"
       />

@@ -20,7 +20,7 @@ const BlogPost = (props) => {
     return (
       <>
         <div className="header-blog-post">
-          <Header label="Back" />
+          <Header />
         </div>
         <div className="post-container">
           <div className="post-title">{blog.fields.title}</div>
@@ -33,7 +33,7 @@ const BlogPost = (props) => {
             <div className="post-date">{blog.fields.publishDate}</div>
 
             <div className="post-body">{blog.fields.body}</div>
-            <div className="post-author">{blog.fields.author}</div>
+            <div className="post-author">- {blog.fields.author}</div>
           </div>
         </div>
       </>
