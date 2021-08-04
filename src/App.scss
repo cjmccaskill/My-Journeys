@@ -10,31 +10,64 @@
   position: relative;
   display: flex;
   flex-direction: column;
+  color: #3d3f4c;
+  font-size: 1rem;
 }
 
 // HEADER nav stlyes
-.nav-container {
-  overflow: hidden;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 10;
+.header-home {
+  .nav-container {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
 
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    min-height: 40px;
-    padding: 10px 15px;
-    font-size: 1.2em;
-    color: white;
-    text-decoration: none;
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 40px;
+      padding: 10px 25px;
+
+      a {
+        font-size: 1.2em;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.header-blog-post {
+  .nav-container {
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 5px 20px -10px #000;
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 40px;
+      padding: 10px 25px;
+      font-size: 1.2em;
+      color: #303034;
+      text-decoration: none;
+    }
+    a {
+      font-size: 1.2em;
+      color: #303034;
+      text-decoration: none;
+    }
   }
 }
 
 // HERO styles
 .hero-container {
   position: relative;
+  z-index: -1;
   img {
     width: 100%;
     max-width: 2000px;
@@ -84,12 +117,13 @@
       padding: 20px 25px;
       border: 1px solid #e8e8e8;
       border-top: none;
+      font-size: 1rem;
 
       .blog-title {
         margin: 5px 0;
-        font-size: 25px;
-        line-height: 25px;
-        letter-spacing: -0.9px;
+        font-size: 29px;
+        line-height: 36px;
+        letter-spacing: -1.04px;
         color: #303034;
       }
       .read-more {
@@ -113,7 +147,49 @@
 
 // BLOG Post page styles
 .post-container {
-  margin-top: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 50px auto 10px;
+  width: 100%;
+  max-width: 700px;
+  color: #3d3f4c;
+  font-size: 1rem;
+
+  .post-title {
+    margin-top: 20px;
+    text-align: center;
+    padding: 15px auto 10px;
+    font-size: 2.5em;
+    letter-spacing: 1;
+    box-shadow: 1px 2px 5px rgba(128, 128, 128, 0.664);
+  }
+  .post-img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+  }
+
+  .post-content {
+    margin: 10px 25px;
+  }
+
+  .post-date {
+    font-size: 1.1em;
+    color: #3030349a;
+    margin: 10px auto;
+  }
+
+  .post-body {
+    text-align: justify;
+    line-height: 1.8;
+    font-size: 1.1rem;
+  }
+
+  .post-author {
+    text-align: right;
+    font-size: 1.3rem;
+  }
 }
 
 // FOOTER styles
@@ -122,7 +198,11 @@
   flex-direction: column;
   justify-content: space-evenly;
   text-align: center;
-  margin: 10px 0;
+  margin: 10px;
+
+  p {
+    padding: 5px 0;
+  }
 
   .quote-container {
     max-width: 400px;
