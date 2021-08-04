@@ -36,6 +36,10 @@
     font-size: 1.2em;
     color: #303034;
     text-decoration: none;
+
+    &:hover {
+      text-shadow: 1px 1px rgba(0, 0, 0, 0.363);
+    }
   }
 }
 
@@ -50,6 +54,7 @@
       font-size: 1.2em;
       color: #fff;
       text-decoration: none;
+
       &:first-child {
         display: none;
       }
@@ -109,6 +114,7 @@
     width: 300px;
     margin: 1em;
     box-sizing: inherit;
+    box-shadow: 2px 2px 8px 3px rgba(112, 112, 112, 0.74);
 
     img {
       width: 100%;
@@ -126,14 +132,23 @@
         line-height: 36px;
         letter-spacing: -1.04px;
         color: #303034;
+
+        &:hover {
+          text-shadow: 1px 1px rgba(151, 151, 151, 0.719);
+        }
       }
       .read-more {
         margin-top: 15px;
         border-bottom: 2px solid #303034;
+        padding-left: 3px;
+        padding-top: 2px;
 
         &:hover {
-          background-color: #e29c1a;
-          border-bottom: 2px solid #e29c1a;
+          background-color: #ffac4c;
+          border-bottom: 2px solid #ffac4c;
+          border-radius: 2px;
+          width: 5.3em;
+          box-shadow: 2px 2px 2px 2px rgb(207, 207, 207);
         }
       }
 
