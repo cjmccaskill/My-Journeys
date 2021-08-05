@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import Header from "../components/Header";
 
 const BlogPost = (props) => {
-  // console.log("Selected Props Data -", props);
   const [blog, setBlog] = useState({});
   const [blogImage, setBlogImage] = useState({});
 

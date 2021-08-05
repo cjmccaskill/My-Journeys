@@ -338,6 +338,17 @@ $font-fam: "Krub", sans-serif;
   a {
     color: #000;
     text-decoration: none;
+    font-weight: 700;
+
+    &:hover {
+      font-size: 105%;
+      background-color: #ffac4c;
+      border-bottom: 2px solid #ffac4c;
+      border-radius: 2px;
+      // width: 5.9em;
+      padding-right: 5px;
+      box-shadow: 2px 2px 2px 2px rgb(207, 207, 207);
+    }
   }
 }
 

@@ -1,7 +1,6 @@
 import "./App.scss";
 import { useState, useEffect } from "react";
 import { Route, Switch, Redirect } from "react-router-dom";
-// import Header from "./components/Header";
 import Home from "./pages/Home";
 import BlogPost from "./pages/BlogPost";
 import Form from "./components/Form";
@@ -40,7 +39,6 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Header /> */}
       <Switch>
         <Route exact path="/">
           <Redirect to="/home" />
