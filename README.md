@@ -3,7 +3,7 @@
 ## Project Links
 
 - [Github](https://github.com/cjmccaskill/My-Journeys)
-- [Deployed site](https://my-journeys-9fx6wjqm5-cjmccaskill.vercel.app/)
+- [Deployed site](https://my-journeys.vercel.app/home)
 
 ## Project Description
 
@@ -24,9 +24,7 @@ Here is a sample code snippet from the api that I built for this project.
         "author": {}
         },
         "publishDate": "2017-05-12T00:00+02:00",
-        "tags": [
-          "javascript"
-        ]} }
+        } }
 ```
 
 ## Wireframes
@@ -48,15 +46,12 @@ Here is a sample code snippet from the api that I built for this project.
 
 #### PostMVP EXAMPLE
 
+- Add a newsletter sign up form
 - Add Search input for the blog post to search by topic or tags
 - Add in a random hero image generator to change the hero image
 - Add about author section/pop out component
 
 ## Components
-
-##### Writing out your components and its descriptions isn't a required part of the proposal but can be helpful.
-
-Based on the initial logic defined in the previous sections try and breakdown the logic further into stateless/stateful components.
 
 | Component |                          Description                          |
 | --------- | :-----------------------------------------------------------: |
@@ -87,13 +82,35 @@ Time frames are also vital in the development cycle. You have limited time to co
 
 -React
 -Sass
+-Formspree for form submissions
 
 ## Code Snippet
 
-Use this section to include a brief code snippet of functionality that you are proud of an a brief description. Code snippet should not be greater than 10 lines of code.
+Here I had to figure out how to make two async function work together and by making sure the first one had finished it's call before the second one started.
 
 ```
-function reverse(string) {
-	// here is the code to reverse a string of text
-}
+  const getSelectedBlog = async () => {
+    const response = await fetch(
+      `https://cdn.contentful.com/spaces/etc9m00jwpir/environments/master/entries/${props.match.params.id}/?access_token=${apiKey}`
+    );
+    const data = await response.json();
+    setBlog(data);
+  };
+
+  const getSelectedBlogImage = async () => {
+    const response = await fetch(
+      `https://cdn.contentful.com/spaces/etc9m00jwpir/environments/master/assets/${blog.fields.image.sys.id}/?access_token=${apiKey}`
+    );
+    const data = await response.json();
+    setBlogImage(data);
+  };
+
+  useEffect(() => {
+    if (!blog.metadata) {
+      getSelectedBlog();
+    }
+    if (blog.metadata) {
+      getSelectedBlogImage();
+    }
+  }, [blog.metadata]);
 ```

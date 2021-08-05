@@ -1,11 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Krub:wght@300;400;500;700&display=swap");
+
 $bg: #ebebeb;
 $scale: 1.5;
 $darkgray: #3d3f4c;
+$font-fam: "Krub", sans-serif;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: $font-fam;
+  font-weight: 400;
 }
 
 // GLOBAL styles
@@ -25,6 +30,7 @@ $darkgray: #3d3f4c;
   top: 0;
   width: 100%;
   box-shadow: 0 5px 20px -10px #000;
+  transition: background-color 0.4s ease-out;
 
   .navbar {
     display: flex;
@@ -54,6 +60,11 @@ $darkgray: #3d3f4c;
       background-color: transparent;
       justify-content: flex-end;
     }
+    .navbar.active {
+      background-image: linear-gradient(180deg, #303034a6 20%, #303034 100%);
+      color: $darkgray;
+    }
+
     a {
       font-size: 1.2em;
       color: #fff;
@@ -97,6 +108,11 @@ $darkgray: #3d3f4c;
     border: 2px solid rgba(0, 0, 0, 0.772);
     border-radius: 2px 20px 2px 20px;
     padding: 8px 10px;
+
+    span {
+      color: #ff8800;
+      font-weight: 700;
+    }
   }
 }
 
@@ -136,6 +152,7 @@ $darkgray: #3d3f4c;
         line-height: 36px;
         letter-spacing: -1.04px;
         color: #303034;
+        font-weight: 700;
 
         &:hover {
           text-shadow: 1px 1px rgba(151, 151, 151, 0.719);
@@ -157,7 +174,7 @@ $darkgray: #3d3f4c;
       }
 
       .blog-date {
-        font-size: 0.7em;
+        font-size: 0.8em;
         color: #3030349a;
         margin-left: 5px;
       }
@@ -212,6 +229,7 @@ $darkgray: #3d3f4c;
   .post-author {
     text-align: right;
     font-size: 1.3rem;
+    font-weight: 700;
   }
 }
 
@@ -275,6 +293,15 @@ $darkgray: #3d3f4c;
   }
 }
 
+.form-message {
+  margin: 50px auto;
+  text-align: center;
+  font-size: 3em;
+  font-weight: 700;
+  font-family: $font-fam;
+  color: $darkgray;
+}
+
 // FOOTER styles
 .footer-container {
   display: flex;
@@ -305,6 +332,7 @@ $darkgray: #3d3f4c;
     font-size: 1.1em;
     text-align: right;
     margin-top: 5px;
+    font-weight: 500;
   }
 
   a {

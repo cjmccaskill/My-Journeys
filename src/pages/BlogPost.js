@@ -11,7 +11,6 @@ const BlogPost = (props) => {
       `https://cdn.contentful.com/spaces/etc9m00jwpir/environments/master/entries/${props.match.params.id}/?access_token=6g-qYJkhoa2WNr5MqK3ads4PLkPDy3DQltMuz6QuthU`
     );
     const data = await response.json();
-    console.log("Selected Blog Data -", data);
     setBlog(data);
   };
 
@@ -20,7 +19,6 @@ const BlogPost = (props) => {
       `https://cdn.contentful.com/spaces/etc9m00jwpir/environments/master/assets/${blog.fields.image.sys.id}/?access_token=6g-qYJkhoa2WNr5MqK3ads4PLkPDy3DQltMuz6QuthU`
     );
     const data = await response.json();
-    console.log("Selected Blog Image -", data);
     setBlogImage(data);
   };
 
