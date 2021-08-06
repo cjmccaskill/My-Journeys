@@ -11,7 +11,7 @@ const Hero = () => {
       <div className="hero-text">
         <p>
           Sharing <span>my journey</span> in web development, working remotely,
-          current projects that I am working on, and the lastest invovations in
+          current projects that I am working on, and the latest invovations in
           the world of tech.
         </p>
       </div>
